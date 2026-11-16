@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meaningful CSS Animations</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            text-align: center;
+        }
+
+        header {
+            background: #243b55;
+            color: white;
+            padding: 30px;
+        }
+
+        /* Text sliding animation */
+        .slide-text {
+            font-size: 28px;
+            color: #243b55;
+            animation: slide 3s ease-in-out infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        /* Repeating bouncing animation */
+        .box {
+            width: 120px;
+            height: 120px;
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            border-radius: 15px;
+
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Button hover animation */
+        button {
+            padding: 12px 25px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        button:hover {
+            background: #219150;
+            transform: scale(1.1);
+        }
+
+        /* Fade-in animation */
+        .message {
+            margin: 30px;
+            animation: fade 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.3;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meaningful CSS Animations</h1>
+        <p>Improving User Experience with CSS</p>
+    </header>
+
+    <h2 class="slide-text">Welcome to CSS Animations!</h2>
+
+    <div class="box">
+        Bounce
+    </div>
+
+    <h2 class="message">Animations make websites interactive!</h2>
+
+    <button>Explore More</button>
+
+</body>
+</html>
